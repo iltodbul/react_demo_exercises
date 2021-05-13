@@ -4,6 +4,7 @@ import './components/Heading';
 import Heading from './components/Heading';
 import Main from './components/Main';
 import BookList from './components/BookList';
+import Likes from './components/Counter';
 
 const libraryOwner = 'Iliya'
 
@@ -18,6 +19,8 @@ function App() {
     <div className="App">
       <Heading name={libraryOwner}></Heading>
       <Main count={booksData.length} />
+
+      <Likes />
 
       <BookList books={booksData} />
     </div>
