@@ -4,7 +4,8 @@ import './components/Heading';
 import Heading from './components/Heading';
 import Main from './components/Main';
 import BookList from './components/BookList';
-import Likes from './components/Counter';
+import Likes from './components/Likes';
+import Footer from './Footer.js';
 
 const libraryOwner = 'Iliya';
 
@@ -24,6 +25,8 @@ function App() {
       <Likes />
 
       <BookList />
+
+      <Footer />
     </div>
   );
 }

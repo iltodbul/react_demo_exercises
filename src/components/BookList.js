@@ -24,11 +24,13 @@ class BookList extends Component {
   }
 
   render() {
+    let sortedBooks = this.state.books.sort((a, b) => b.id - a.id);
     return (
       <div className="book-list">
-        {this.state.books.map((x) => {
+        {sortedBooks.map((x) => {
           return (
             <Book
+              key={x.id}
               title={x.title}
               description={x.description}
               clickHandler={() => this.bookClicked(x.title)}
