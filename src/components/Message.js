@@ -30,6 +30,7 @@ class Message extends Component {
       backgroundColor: 'DodgerBlue',
       padding: '10px',
       fontFamily: 'Arial',
+      fontSize: 24,
     };
 
     return (

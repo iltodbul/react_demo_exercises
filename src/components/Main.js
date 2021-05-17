@@ -1,4 +1,5 @@
 import React from 'react';
+import { getBooks } from '../services/mainService.js';
 
 class Main extends React.Component {
   constructor(props) {
@@ -10,11 +11,10 @@ class Main extends React.Component {
   }
 
   componentDidMount() {
-    fetch('http://localhost:3001/books')
-      .then((res) => res.json())
-      .then((books) => {
-        this.setState(() => ({ books }));
-      });
+    getBooks()
+    .then((books) => {
+      this.setState(() => ({ books }));
+    });
   }
 
   render() {
