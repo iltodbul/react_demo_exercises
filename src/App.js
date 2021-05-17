@@ -8,22 +8,22 @@ import Likes from './components/Counter';
 
 const libraryOwner = 'Iliya';
 
-const booksData = [
-  { title: 'Title 1', description: 'description 1' },
-  { title: 'Title 2', description: 'description 2' },
-  { title: 'Title 3' },
-  { description: 'description 4' },
-]; // For demo. This information can be fetched from database.
+// const booksData = [
+//   { title: 'Title 1', description: 'description 1' },
+//   { title: 'Title 2', description: 'description 2' },
+//   { title: 'Title 3' },
+//   { description: 'description 4' },
+// ]; // For demo. This information can be fetched from database.
 
 function App() {
   return (
     <div className="App">
       <Heading name={libraryOwner}></Heading>
-      <Main count={booksData.length} />
+      <Main />
 
       <Likes />
 
-      <BookList books={booksData} />
+      <BookList />
     </div>
   );
 }
