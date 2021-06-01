@@ -20,7 +20,7 @@ class Main extends React.Component {
 
   render() {
     return (
-      <Link to="/book">
+      <Link to="/books">
         <article>
           <h2>There are {this.state.books.length} books</h2>
         </article>

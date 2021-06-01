@@ -8,7 +8,6 @@ import Main from './components/Main';
 import BookList from './components/BookList';
 import Likes from './components/Likes';
 import Footer from './Footer.js';
-import Book from './components/Book';
 
 const libraryOwner = 'Iliya';
 
@@ -26,10 +25,9 @@ function App() {
         <Heading name={libraryOwner}></Heading>
         <Main />
         <Likes />
-        <BookList />
         <Footer />
       </Route>
-      <Route path="/book" component={Book}></Route>
+      <Route path="/books" component={BookList}></Route>
     </div>
   );
 }
