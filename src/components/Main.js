@@ -1,4 +1,6 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
+
 import { getBooks } from '../services/mainService.js';
 
 class Main extends React.Component {
@@ -11,17 +13,18 @@ class Main extends React.Component {
   }
 
   componentDidMount() {
-    getBooks()
-    .then((books) => {
+    getBooks().then((books) => {
       this.setState(() => ({ books }));
     });
   }
 
   render() {
     return (
-      <article>
-        <h2>There are {this.state.books.length} books</h2>
-      </article>
+      <Link to="/book">
+        <article>
+          <h2>There are {this.state.books.length} books</h2>
+        </article>
+      </Link>
     );
   }
 }

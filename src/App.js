@@ -1,3 +1,5 @@
+import { Route, Switch, NavLink, Link } from 'react-router-dom';
+
 import './App.css';
 import './Footer.js';
 import './components/Heading';
@@ -6,6 +8,7 @@ import Main from './components/Main';
 import BookList from './components/BookList';
 import Likes from './components/Likes';
 import Footer from './Footer.js';
+import Book from './components/Book';
 
 const libraryOwner = 'Iliya';
 
@@ -19,14 +22,14 @@ const libraryOwner = 'Iliya';
 function App() {
   return (
     <div className="App">
-      <Heading name={libraryOwner}></Heading>
-      <Main />
-
-      <Likes />
-
-      <BookList />
-
-      <Footer />
+      <Route path="/" exact>
+        <Heading name={libraryOwner}></Heading>
+        <Main />
+        <Likes />
+        <BookList />
+        <Footer />
+      </Route>
+      <Route path="/book" component={Book}></Route>
     </div>
   );
 }
