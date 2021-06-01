@@ -4,4 +4,17 @@ function getBooks() {
     .catch((error) => alert(error));
 }
 
-export { getBooks };
+function addBook(book) {
+  fetch('http://localhost:3001/books', {
+    method: 'post',
+    headers: {
+      'Content-Type': 'application/json',
+    },
+    body: JSON.stringify(book),
+  })
+    .then((res) => res.json())
+    .then((res) => console.log(res))
+    .catch((error) => alert(error));
+}
+
+export { getBooks, addBook };

@@ -20,11 +20,18 @@ class Main extends React.Component {
 
   render() {
     return (
-      <Link to="/books">
-        <article>
-          <h2>There are {this.state.books.length} books</h2>
-        </article>
-      </Link>
+      <>
+        <Link to="/books">
+          <article>
+            <h2>There are {this.state.books.length} books</h2>
+          </article>
+        </Link>
+        <Link to="/add-book">
+          <article>
+            <h5>Add new book</h5>
+          </article>
+        </Link>
+      </>
     );
   }
 }

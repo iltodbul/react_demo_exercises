@@ -8,6 +8,7 @@ import Main from './components/Main';
 import BookList from './components/BookList';
 import Likes from './components/Likes';
 import Footer from './Footer.js';
+import AddBook from './components/AddBook'
 
 const libraryOwner = 'Iliya';
 
@@ -28,6 +29,7 @@ function App() {
         <Footer />
       </Route>
       <Route path="/books" component={BookList}></Route>
+      <Route path="/add-book" component={AddBook}></Route>
     </div>
   );
 }
