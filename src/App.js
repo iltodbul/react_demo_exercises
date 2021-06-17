@@ -12,13 +12,6 @@ import AddBook from './components/AddBook'
 
 const libraryOwner = 'Iliya';
 
-// const booksData = [
-//   { title: 'Title 1', description: 'description 1' },
-//   { title: 'Title 2', description: 'description 2' },
-//   { title: 'Title 3' },
-//   { description: 'description 4' },
-// ]; // For demo. This information can be fetched from database.
-
 function App() {
   return (
     <div className="App">
